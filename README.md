@@ -13,7 +13,7 @@ Hola, soy Javi. Estudio Administración de Sistemas Informáticos en Red (ASIR) 
 
 **jdsantana.com.** Mi web personal: el CV, el proyecto del servidor y una bitácora con lo que voy haciendo. Estará en línea en octubre y se publicará sola desde GitHub cada vez que suba un cambio.
 
-**Infraestructura personal.** Dominio propio con el correo bien configurado (SPF, DKIM y DMARC), alias para separar servicios y llaves FIDO2 en las cuentas importantes.
+**Infraestructura personal.** Dominio propio con el correo bien configurado (SPF, DKIM y DMARC), alias para separar servicios, llaves FIDO2 en las cuentas importantes y una red mesh de tres nodos unidos por cable en casa.
 
 ### Con qué trabajo
 
@@ -31,7 +31,7 @@ Hi, I'm Javi. I'm studying Network and Systems Administration (ASIR, a two-year 
 
 **jdsantana.com.** My personal website: my CV, the server project and a log of what I'm working on. It goes live in October and will deploy itself from GitHub every time I push a change.
 
-**Personal infrastructure.** My own domain with properly configured email (SPF, DKIM and DMARC), aliases to keep services separate, and FIDO2 keys on important accounts.
+**Personal infrastructure.** My own domain with properly configured email (SPF, DKIM and DMARC), aliases to keep services separate, FIDO2 keys on important accounts, and a three-node mesh network with wired backhaul at home.
 
 **In use:** Cloudflare DNS, YubiKey (FIDO2) and Git  
 **Learning:** Debian, AdGuard Home, Tailscale, restic and systemd
