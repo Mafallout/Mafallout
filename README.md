@@ -6,12 +6,12 @@ Hola, soy Javi. Estudio Administración de Sistemas Informáticos en Red (ASIR) 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/estado-oscuro.svg">
-  <img src="assets/estado-claro.svg" alt="Estado: homelab en construcción, jdsantana.com en construcción, infraestructura personal en uso diario." width="100%">
+  <img src="assets/estado-claro.svg" alt="Estado: homelab en construcción, jdsantana.com en línea, infraestructura personal en uso diario." width="100%">
 </picture>
 
-**homelab.** Un mini PC con Debian que filtrará el DNS de toda la casa, con acceso remoto por Tailscale sin abrir puertos y copias cifradas que se hacen solas a diario. Lo documento por fases; el repositorio será público en octubre.
+**homelab.** Un mini PC con Debian que filtrará el DNS de la red de casa, con acceso remoto por Tailscale sin abrir puertos y copias cifradas que se hacen solas a diario. Lo documento por fases; el repositorio será público en octubre.
 
-**jdsantana.com.** Mi web personal: el CV, el proyecto del servidor y una bitácora con lo que voy haciendo. Estará en línea en octubre y se publicará sola desde GitHub cada vez que suba un cambio.
+**[jdsantana.com](https://jdsantana.com).** Mi web personal: el CV, el proyecto del servidor y una bitácora con lo que voy haciendo. Se publica sola desde GitHub cada vez que subo un cambio.
 
 **Infraestructura personal.** Dominio propio con el correo bien configurado (SPF, DKIM y DMARC), alias para separar servicios, llaves FIDO2 en las cuentas importantes y una red mesh de tres nodos unidos por cable en casa.
 
@@ -27,9 +27,9 @@ Hola, soy Javi. Estudio Administración de Sistemas Informáticos en Red (ASIR) 
 
 Hi, I'm Javi. I'm studying Network and Systems Administration (ASIR, a two-year Spanish vocational degree) in Huelva, Spain. I like understanding how the things I use every day work under the hood, and automating repetitive tasks. I'm looking for a vocational training internship for May 2027.
 
-**homelab.** A mini PC running Debian that will filter DNS for the whole house, with remote access through Tailscale without opening any ports, and encrypted backups that run on their own every day. I'm documenting it phase by phase, and the repository goes public in October.
+**homelab.** A mini PC running Debian that will filter DNS for the home network, with remote access through Tailscale without opening any ports, and encrypted backups that run on their own every day. I'm documenting it phase by phase, and the repository goes public in October.
 
-**jdsantana.com.** My personal website: my CV, the server project and a log of what I'm working on. It goes live in October and will deploy itself from GitHub every time I push a change.
+**[jdsantana.com](https://jdsantana.com).** My personal website: my CV, the server project and a log of what I'm working on. It deploys itself from GitHub every time I push a change.
 
 **Personal infrastructure.** My own domain with properly configured email (SPF, DKIM and DMARC), aliases to keep services separate, FIDO2 keys on important accounts, and a three-node mesh network with wired backhaul at home.
 
