@@ -1,6 +1,6 @@
 <img src="assets/cabecera.svg" alt="Javier Delgado Santana. Sistemas, redes y automatización." width="100%">
 
-Hola, soy Javi. Estudio Administración de Sistemas Informáticos en Red (ASIR) en Huelva. Me gusta entender cómo funcionan por dentro las cosas que uso cada día y automatizar lo que se repite. Busco prácticas de FP para mayo de 2027.
+Hola, soy Javi. Estudio Administración de Sistemas Informáticos en Red (ASIR) en Huelva. Me gusta trastear con lo que tenga por casa y aprender por mi cuenta. Busco prácticas de FP para mayo de 2027.
 
 ### En qué estoy
 
