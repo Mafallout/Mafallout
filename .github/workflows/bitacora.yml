@@ -1,0 +1,23 @@
+name: Bitácora en el README
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bitacora:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a
+      - uses: gautamkrishnar/blog-post-workflow@90934062adede9cbd3a4ff56a32b11206b299089
+        with:
+          feed_list: "https://jdsantana.com/bitacora/rss.xml"
+          max_post_count: 3
+          commit_message: "Actualiza las últimas entradas de la bitácora"
+          committer_username: "github-actions[bot]"
+          committer_email: "41898282+github-actions[bot]@users.noreply.github.com"
+          enable_keepalive: false
