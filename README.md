@@ -15,6 +15,11 @@ Hola, soy Javi. Estudio Administración de Sistemas Informáticos en Red (ASIR) 
 
 **Infraestructura personal.** Dominio propio con el correo bien configurado (SPF, DKIM y DMARC), alias para separar servicios, llaves FIDO2 en las cuentas importantes y una red mesh de tres nodos unidos por cable en casa.
 
+## Últimas entradas de la bitácora
+
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
 ### Con qué trabajo
 
 **En uso:** Cloudflare DNS, YubiKey (FIDO2) y Git  
