@@ -18,9 +18,9 @@ Hola, soy Javi. Estudio Administración de Sistemas Informáticos en Red (ASIR) 
 ## Últimas entradas de la bitácora
 
 <!-- BLOG-POST-LIST:START -->
+- [Debian instalado, acceso con llave y Tailscale](https://jdsantana.com/bitacora/servidor-montado-y-acceso)
 - [Esquema explicado, notas de seguridad y CV nuevo](https://jdsantana.com/bitacora/esquema-y-cv)
 - [Glosario y tarjeta para compartir la web](https://jdsantana.com/bitacora/glosario-y-tarjeta-para-compartir-web)
-- [Web publicada con despliegue automático](https://jdsantana.com/bitacora/web-publicada)
 <!-- BLOG-POST-LIST:END -->
 
 ### Con qué trabajo
