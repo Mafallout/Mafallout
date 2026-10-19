@@ -1,22 +1,10 @@
 # Textos de los dibujos del perfil (assets/). Si cambias algo aquí, la Action
 # "Tarjeta de estado" los vuelve a dibujar sola en un par de minutos.
 
+# La cabecera es el sistema solar de mi esfera del reloj. Aquí solo van sus textos.
 [cabecera]
 nombre = "Javier Delgado Santana"
 lema = "Sistemas, redes, seguridad y automatización"
-
-# Las cajas del esquema, de izquierda a derecha.
-[[cabecera.caja]]
-titulo = "Dispositivos"
-detalle = "móviles y PC"
-
-[[cabecera.caja]]
-titulo = "Mini PC"
-detalle = "AdGuard Home"
-
-[[cabecera.caja]]
-titulo = "Internet"
-detalle = "consulta cifrada"
 
 # Cada [[proyecto]] es una fila de la tarjeta "En qué estoy", en este orden.
 # estado: "funciona" (punto verde que late) o "en-construccion" (aro ámbar).

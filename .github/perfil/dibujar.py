@@ -24,19 +24,11 @@ import uharfbuzz as hb
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 from fontTools.ttLib import TTFont
+from sistema_solar import VARIANTES, cabecera_sistema
 
 AQUI = Path(__file__).resolve().parent
 RAIZ = AQUI.parents[1]
 MADRID = ZoneInfo("Europe/Madrid")
-
-# Colores de la web (docs/diseno.md de jdsantana.com)
-PINO = "#1c3b30"
-LIQUEN = "#9fb8ac"
-BANDA_CAJA = "#24483b"
-BANDA_CAJA_LUZ = "#2f5e4c"
-BANDA_BORDE = "#6f8f81"
-BANDA_TEXTO = "#eef4f0"
-BANDA_TEXTO_SUAVE = "#c9dcd2"
 
 TEMAS = {
     "claro": dict(fondo="#f6f8f7", borde="#dde4e0", linea="#e4eae7", tinta="#1f2623",
@@ -137,63 +129,14 @@ def fecha_rss(url):
     return max(fechas).astimezone(MADRID) if fechas else None
 
 
-def cabecera(datos):
-    W, H = 900, 278
-    nombre, lema, cajas = datos["nombre"], datos["lema"], datos["caja"]
-    if len(cajas) != 3:
-        raise SystemExit("La cabecera necesita exactamente tres cajas en perfil.toml.")
-    cx = [48, 350, 652]
-    cy, cw, ch = 152, 200, 84
-    ly = cy + ch / 2
-    cabe(F600, nombre, 46, W - 96, "el nombre de la cabecera")
-    cabe(F400, lema, 23, W - 96, "el lema de la cabecera")
-    for caja in cajas:
-        cabe(F600, caja["titulo"], 25, cw - 40, "una caja de la cabecera")
-        cabe(F400, caja["detalle"], 19, cw - 40, "una caja de la cabecera")
-
-    camino = ", ".join(c["titulo"] for c in cajas)
-    p = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="t">',
-        f"<title id=\"t\">{nombre}. {lema}. Esquema: {camino}.</title>",
-        # Ciclo de 8,5 s: el punto sale de la primera caja, entra en la segunda,
-        # que se ilumina, sigue hasta la tercera y descansa unos 5 s.
-        "<style>",
-        ".bx{animation:on .45s ease-out both}",
-        ".ln{stroke-dasharray:100;animation:draw .45s cubic-bezier(.45,0,.2,1) both}",
-        ".ah{animation:on .2s ease-out both}",
-        ".pt,.luz{opacity:0;animation:8.5s linear 2s infinite}",
-        ".pt1{animation-name:pt1}.pt2{animation-name:pt2}",
-        ".luz0{animation-name:luz0}.luz1{animation-name:luz1}.luz2{animation-name:luz2}",
-        "@keyframes on{from{opacity:0}to{opacity:1}}",
-        "@keyframes draw{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}",
-        "@keyframes luz0{0%{opacity:0}2%,7%{opacity:1}11%,100%{opacity:0}}",
-        "@keyframes pt1{0%,4%{transform:translateX(0);opacity:0}5.5%{opacity:1}14%{transform:translateX(96px);opacity:1}15%,100%{transform:translateX(96px);opacity:0}}",
-        "@keyframes luz1{0%,14%{opacity:0}16%,22%{opacity:1}26%,100%{opacity:0}}",
-        "@keyframes pt2{0%,22%{transform:translateX(0);opacity:0}23.5%{opacity:1}32%{transform:translateX(96px);opacity:1}33%,100%{transform:translateX(96px);opacity:0}}",
-        "@keyframes luz2{0%,32%{opacity:0}34%,40%{opacity:1}44%,100%{opacity:0}}",
-        "@media (prefers-reduced-motion:reduce){.bx,.ln,.ah{animation:none}.pt,.luz{animation:none;opacity:0}}",
-        "</style>",
-        f'<rect width="{W}" height="{H}" rx="14" fill="{PINO}"/>',
-        f'<path fill="{BANDA_TEXTO}" d="{F600.trazo(nombre, 47, 82, 46)}"/>',
-        f'<path fill="{BANDA_TEXTO_SUAVE}" d="{F400.trazo(lema, 49, 119, 23)}"/>',
-    ]
-    # Conexiones de borde a borde, con la flecha hacia donde va la consulta
-    for i, retraso in enumerate((0.55, 0.95)):
-        x1, x2 = cx[i] + cw + 1, cx[i + 1] - 1
-        p.append(f'<line class="ln" style="animation-delay:{retraso}s" x1="{num(x1)}" y1="{num(ly)}" x2="{num(x2 - 1)}" y2="{num(ly)}" stroke="{LIQUEN}" stroke-width="1.6"/>')
-        p.append(f'<path class="ah" style="animation-delay:{retraso + 0.4:.2f}s" d="M{num(x2 - 9)} {num(ly - 6)}L{num(x2 - 1.5)} {num(ly)}L{num(x2 - 9)} {num(ly + 6)}" fill="none" stroke="{LIQUEN}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>')
-    for i, (caja, retraso) in enumerate(zip(cajas, (0.2, 0.6, 1.0))):
-        x = cx[i]
-        p.append(f'<g class="bx" style="animation-delay:{retraso}s">')
-        p.append(f'<rect x="{x}" y="{cy}" width="{cw}" height="{ch}" rx="10" fill="{BANDA_CAJA}" stroke="{BANDA_BORDE}" stroke-width="1.5"/>')
-        p.append(f'<rect class="luz luz{i}" x="{x + 0.75}" y="{cy + 0.75}" width="{cw - 1.5}" height="{ch - 1.5}" rx="9.3" fill="{BANDA_CAJA_LUZ}"/>')
-        p.append(f'<path fill="{BANDA_TEXTO}" d="{F600.trazo(caja["titulo"], x + 20, cy + 37, 25)}"/>')
-        p.append(f'<path fill="{BANDA_TEXTO_SUAVE}" d="{F400.trazo(caja["detalle"], x + 20, cy + 66, 19)}"/>')
-        p.append("</g>")
-    for i in range(2):
-        p.append(f'<circle class="pt pt{i + 1}" cx="{num(cx[i] + cw + 2)}" cy="{num(ly)}" r="4.5" fill="{BANDA_TEXTO}"/>')
-    p.append("</svg>")
-    return "\n".join(p) + "\n"
+def cabecera(datos, variante):
+    v = VARIANTES[variante]
+    nombre, lema = datos["nombre"], datos["lema"]
+    (nx, ny, nt), (lx, ly, lt), fin = v["nombre"], v["lema"], v["texto"][2]
+    cabe(F600, nombre, nt, fin - nx, "el nombre de la cabecera")
+    cabe(F400, lema, lt, fin - lx, "el lema de la cabecera")
+    titulo = f"{nombre}. {lema}. El sistema solar de Outer Wilds de mi esfera del reloj, en un bucle que acaba en supernova."
+    return cabecera_sistema(titulo, v, F600.trazo(nombre, nx, ny, nt), F400.trazo(lema, lx, ly, lt))
 
 
 def estado(proyectos, tema):
@@ -258,7 +201,8 @@ def main():
             pr["fecha_texto"] = fecha and f"Última entrada: {fecha:%d/%m/%Y}"
 
     assets = RAIZ / "assets"
-    (assets / "cabecera.svg").write_text(cabecera(datos["cabecera"]), encoding="utf-8", newline="\n")
+    (assets / "cabecera.svg").write_text(cabecera(datos["cabecera"], "escritorio"), encoding="utf-8", newline="\n")
+    (assets / "cabecera-movil.svg").write_text(cabecera(datos["cabecera"], "movil"), encoding="utf-8", newline="\n")
     for tema in TEMAS:
         (assets / f"estado-{tema}.svg").write_text(estado(proyectos, tema), encoding="utf-8", newline="\n")
     for pr in proyectos:

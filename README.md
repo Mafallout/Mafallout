@@ -1,4 +1,7 @@
-<img src="assets/cabecera.svg" alt="Javier Delgado Santana. Sistemas, redes, seguridad y automatización. Esquema de mi red: los dispositivos de casa preguntan el DNS a un mini PC con AdGuard Home, y el mini PC hace la consulta a internet cifrada." width="100%">
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/cabecera-movil.svg">
+  <img src="assets/cabecera.svg" alt="Javier Delgado Santana. Sistemas, redes, seguridad y automatización. El sistema solar de Outer Wilds, en un bucle que acaba en supernova." width="100%">
+</picture>
 
 Hola, soy Javi. Estudio Administración de Sistemas Informáticos en Red (ASIR) en el IES San Sebastián, en Huelva. Lo que aprendo en clase lo pongo en práctica en casa, y si algo se puede automatizar, lo hago. Busco prácticas de FP del 3 al 31 de mayo de 2027, en Huelva o cerca.
 
@@ -8,6 +11,7 @@ Hola, soy Javi. Estudio Administración de Sistemas Informáticos en Red (ASIR) 
   <source media="(prefers-color-scheme: dark)" srcset="assets/estado-oscuro.svg">
   <img src="assets/estado-claro.svg" alt="Estado de mis proyectos y fecha de su último cambio." width="100%">
 </picture>
+<br>
 
 [El homelab](https://jdsantana.com/homelab) es un mini PC con Debian, sin entorno gráfico, que da servicio a toda la red de casa. Filtra la publicidad y los rastreadores con AdGuard Home, y solo se entra por SSH con llave FIDO2. Lo monto por fases. En la web cuento cómo va cada una y [por qué he decidido cada cosa](https://jdsantana.com/homelab/decisiones).
 
