@@ -1,0 +1,48 @@
+# Textos de los dibujos del perfil (assets/). Si cambias algo aquí, la Action
+# "Tarjeta de estado" los vuelve a dibujar sola en un par de minutos.
+
+[cabecera]
+nombre = "Javier Delgado Santana"
+lema = "Sistemas, redes, seguridad y automatización"
+
+# Las cajas del esquema, de izquierda a derecha.
+[[cabecera.caja]]
+titulo = "Dispositivos"
+detalle = "móviles y PC"
+
+[[cabecera.caja]]
+titulo = "Mini PC"
+detalle = "AdGuard Home"
+
+[[cabecera.caja]]
+titulo = "Internet"
+detalle = "consulta cifrada"
+
+# Cada [[proyecto]] es una fila de la tarjeta "En qué estoy", en este orden.
+# estado: "funciona" (punto verde que late) o "en-construccion" (aro ámbar).
+# texto: lo que se lee a la derecha de la fila.
+# repo: debajo sale la fecha de su último cambio. Si el repo es privado, no sale.
+# rss: debajo sale la fecha de la última entrada.
+
+[[proyecto]]
+nombre = "homelab"
+estado = "en-construccion"
+texto = "En construcción"
+repo = "Mafallout/homelab"
+
+[[proyecto]]
+nombre = "jdsantana.com"
+estado = "funciona"
+texto = "En línea"
+rss = "https://jdsantana.com/bitacora/rss.xml"
+
+[[proyecto]]
+nombre = "vtscan"
+estado = "funciona"
+texto = "Funciona"
+repo = "Mafallout/virustotal-folder-scanner"
+
+[[proyecto]]
+nombre = "Infraestructura personal"
+estado = "funciona"
+texto = "En uso diario"

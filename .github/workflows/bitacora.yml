@@ -17,7 +17,10 @@ jobs:
         with:
           feed_list: "https://jdsantana.com/bitacora/rss.xml"
           max_post_count: 3
-          commit_message: "Actualiza las últimas entradas de la bitácora"
+          template: "- $date: [$title]($url)$newline"
+          date_format: "UTC:dd/mm/yyyy"
+          tag_post_pre_newline: true
+          commit_message: "Actualizadas las últimas entradas de la bitácora"
           committer_username: "github-actions[bot]"
           committer_email: "41898282+github-actions[bot]@users.noreply.github.com"
           enable_keepalive: false

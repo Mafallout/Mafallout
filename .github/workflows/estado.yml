@@ -1,0 +1,44 @@
+name: Tarjeta de estado
+
+on:
+  schedule:
+    - cron: "30 7 * * *"
+  push:
+    branches: [main]
+    paths:
+      - perfil.toml
+      - .github/perfil/**
+      - .github/workflows/estado.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tarjeta-de-estado
+
+jobs:
+  dibujar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a
+      - name: Instalar dependencias
+        run: |
+          python3 -m venv "$RUNNER_TEMP/venv"
+          "$RUNNER_TEMP/venv/bin/pip" install --quiet -r .github/perfil/requisitos.txt
+      - name: Dibujar la cabecera y la tarjeta
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: '"$RUNNER_TEMP/venv/bin/python" .github/perfil/dibujar.py'
+      - name: Guardar si ha cambiado
+        run: |
+          git add assets
+          if git diff --cached --quiet; then
+            echo "La tarjeta no ha cambiado."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Actualizada la tarjeta de estado"
+          git pull --rebase
+          git push
