@@ -1,0 +1,9 @@
+# Abre un PR cuando sale una versión nueva de una de las acciones de .github/workflows.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
