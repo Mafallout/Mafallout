@@ -1,4 +1,4 @@
 brotli==1.2.0
 fonttools==4.67.0
-tzdata==2025.2
+tzdata==2026.5
 uharfbuzz==0.56.3
