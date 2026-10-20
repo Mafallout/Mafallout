@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a
-      - uses: gautamkrishnar/blog-post-workflow@90934062adede9cbd3a4ff56a32b11206b299089
+      - uses: gautamkrishnar/blog-post-workflow@459e78d2225e6b53fa6801528c5e644059c03514
         with:
           feed_list: "https://jdsantana.com/bitacora/rss.xml"
           max_post_count: 3
