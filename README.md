@@ -24,9 +24,9 @@ También mantengo lo que uso a diario: un dominio propio en Cloudflare con los r
 ### Últimas entradas de la bitácora
 
 <!-- BLOG-POST-LIST:START -->
+- 15/10/2026: [AdGuard Home para toda la casa y aviso si se cae](https://jdsantana.com/bitacora/adguard-para-toda-la-casa)
+- 13/10/2026: [Memoria comprobada y Secure Boot](https://jdsantana.com/bitacora/memoria-y-secure-boot)
 - 04/10/2026: [Debian instalado, acceso con llave y Tailscale](https://jdsantana.com/bitacora/servidor-montado-y-acceso)
-- 02/10/2026: [Esquema explicado, notas de seguridad y CV nuevo](https://jdsantana.com/bitacora/esquema-y-cv)
-- 01/10/2026: [Glosario y tarjeta para compartir la web](https://jdsantana.com/bitacora/glosario-y-tarjeta-para-compartir-web)
 
 <!-- BLOG-POST-LIST:END -->
 
