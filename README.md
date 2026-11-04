@@ -24,9 +24,9 @@ También mantengo lo que uso a diario: un dominio propio en Cloudflare con los r
 ### Últimas entradas de la bitácora
 
 <!-- BLOG-POST-LIST:START -->
-- 22/10/2026: [Copias cifradas fuera de casa con restic](https://jdsantana.com/bitacora/copias-cifradas-con-restic)
-- 20/10/2026: [DNSSEC, www y DMARC en el dominio](https://jdsantana.com/bitacora/dnssec-www-y-dmarc)
-- 15/10/2026: [AdGuard Home para toda la casa y aviso si se cae](https://jdsantana.com/bitacora/adguard-para-toda-la-casa)
+- 03/11/2026: [Home Assistant y repaso de seguridad](https://jdsantana.com/bitacora/home-assistant-y-repaso-de-seguridad)
+- 31/10/2026: [Docker, vigilancia y nombres propios con Caddy](https://jdsantana.com/bitacora/docker-vigilancia-y-caddy)
+- 25/10/2026: [DNS cifrado y un DNS de respaldo en el router](https://jdsantana.com/bitacora/dns-cifrado-y-respaldo)
 
 <!-- BLOG-POST-LIST:END -->
 
