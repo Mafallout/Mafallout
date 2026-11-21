@@ -14,8 +14,8 @@ lema = "Sistemas, redes, seguridad y automatización"
 
 [[proyecto]]
 nombre = "homelab"
-estado = "en-construccion"
-texto = "En construcción"
+estado = "funciona"
+texto = "En uso, ampliándolo"
 repo = "Mafallout/homelab"
 
 [[proyecto]]

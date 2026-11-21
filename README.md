@@ -13,7 +13,7 @@ Hola, soy Javi. Estudio Administración de Sistemas Informáticos en Red (ASIR) 
 </picture>
 <br>
 
-[El homelab](https://jdsantana.com/homelab) es un mini PC con Debian, sin entorno gráfico, que da servicio a toda la red de casa. Filtra la publicidad y los rastreadores con AdGuard Home, por SSH se entra con llave FIDO2 y, si deja de responder, me llega un aviso al móvil. Lo monto por fases. En la web cuento cómo va cada una y [por qué he decidido cada cosa](https://jdsantana.com/homelab/decisiones).
+[El homelab](https://jdsantana.com/homelab) es un mini PC con Debian, sin entorno gráfico, que da servicio a toda la red de casa. Filtra la publicidad y los rastreadores con AdGuard Home, por SSH se entra con llave FIDO2 y, si deja de responder, me llega un aviso al móvil. Lo amplío por fases. En la web cuento cómo va cada una y [por qué he decidido cada cosa](https://jdsantana.com/homelab/decisiones).
 
 [jdsantana.com](https://jdsantana.com) es mi web: el CV, el homelab por fases y una bitácora de cada sesión, también de lo que falla. Cada cambio pasa comprobaciones automáticas antes de publicarse en Cloudflare. Tiene A+ en Mozilla Observatory, y cada lunes un script vuelve a pedir la nota y me avisa si baja.
 
@@ -32,8 +32,8 @@ También mantengo lo que uso a diario: un dominio propio en Cloudflare con los r
 
 ### Con qué trabajo
 
-**Uso:** Debian sin entorno gráfico, LVM, systemd, SSH, UFW, AdGuard Home, DNS sobre HTTPS, Tailscale, Healthchecks, Cloudflare y Git.  
-**Ahora con:** restic, almacenamiento compatible con S3 y DNS sobre TLS.  
+**Uso:** Debian sin entorno gráfico, LVM, systemd, SSH, UFW, AdGuard Home, DNS sobre HTTPS y sobre TLS, Tailscale, restic, almacenamiento compatible con S3, Docker, Caddy, Uptime Kuma, Prometheus, Grafana, Healthchecks, Cloudflare y Git.  
+**Ahora con:** Home Assistant.  
 **También he usado:** Python, SQL, HTML y XML.
 
 Me puedes escribir a [contacto@jdsantana.com](mailto:contacto@jdsantana.com).
@@ -43,7 +43,7 @@ Me puedes escribir a [contacto@jdsantana.com](mailto:contacto@jdsantana.com).
 
 Hi, I'm Javi. I study Network and Systems Administration (ASIR, a Spanish vocational degree that takes two years) at IES San Sebastián in Huelva, Spain. What I learn in class I put into practice at home, and if something can be automated, I automate it. I'm looking for a vocational training internship from 3 to 31 May 2027, in or near Huelva.
 
-[The homelab](https://jdsantana.com/homelab) is a mini PC running Debian with no desktop, and it serves my whole home network. It blocks ads and trackers with AdGuard Home, SSH access uses a FIDO2 key, and if it stops responding I get an alert on my phone. I'm building it in phases. On my website I explain how each phase is going and [the reasons behind each decision](https://jdsantana.com/homelab/decisiones) (in Spanish).
+[The homelab](https://jdsantana.com/homelab) is a mini PC running Debian with no desktop, and it serves my whole home network. It blocks ads and trackers with AdGuard Home, SSH access uses a FIDO2 key, and if it stops responding I get an alert on my phone. I'm expanding it in phases. On my website I explain how each phase is going and [the reasons behind each decision](https://jdsantana.com/homelab/decisiones) (in Spanish).
 
 [jdsantana.com](https://jdsantana.com) is my website: my CV, the homelab phase by phase, and a log of every session, failures included. Every change passes automated checks before it goes live on Cloudflare. It scores A+ on Mozilla Observatory, and every Monday a script asks for the grade again and warns me if it drops.
 
@@ -51,8 +51,8 @@ Hi, I'm Javi. I study Network and Systems Administration (ASIR, a Spanish vocati
 
 I also look after what I use every day: my own domain on Cloudflare with its mail records (MX, SPF, DKIM and DMARC), aliases so I never give out my main address, a VPN on all my devices, and a mesh network of three nodes linked by cable.
 
-**I use:** Debian with no desktop, LVM, systemd, SSH, UFW, AdGuard Home, DNS over HTTPS, Tailscale, Healthchecks, Cloudflare and Git.  
-**Working on now:** restic, storage compatible with S3 and DNS over TLS.  
+**I use:** Debian with no desktop, LVM, systemd, SSH, UFW, AdGuard Home, DNS over HTTPS and over TLS, Tailscale, restic, storage compatible with S3, Docker, Caddy, Uptime Kuma, Prometheus, Grafana, Healthchecks, Cloudflare and Git.  
+**Working on now:** Home Assistant.  
 **I have also used:** Python, SQL, HTML and XML.
 
 You can write to me at [contacto@jdsantana.com](mailto:contacto@jdsantana.com).
