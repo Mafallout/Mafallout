@@ -13,13 +13,10 @@ Hola, soy Javi. Estudio Administración de Sistemas Informáticos en Red (ASIR) 
 </picture>
 <br>
 
-[El homelab](https://jdsantana.com/homelab) es un mini PC con Debian, sin entorno gráfico, que da servicio a toda la red de casa. Filtra la publicidad y los rastreadores con AdGuard Home, por SSH se entra con llave FIDO2 y, si deja de responder, me llega un aviso al móvil. Lo amplío por fases. En la web cuento cómo va cada una y [por qué he decidido cada cosa](https://jdsantana.com/homelab/decisiones).
-
-[jdsantana.com](https://jdsantana.com) es mi web: el CV, el homelab por fases y una bitácora de cada sesión, también de lo que falla. Cada cambio pasa comprobaciones automáticas antes de publicarse en Cloudflare. Tiene A+ en Mozilla Observatory, y cada lunes un script vuelve a pedir la nota y me avisa si baja.
-
-[vtscan](https://github.com/Mafallout/virustotal-folder-scanner) revisa una carpeta de Windows con la API gratuita de VirusTotal y ordena los archivos de más a menos peligroso. Está pensado para carpetas grandes, como programas descargados de fuentes no oficiales. Guarda cada respuesta para no repetir consultas y se ajusta a los límites de la API.
-
-También mantengo lo que uso a diario: un dominio propio en Cloudflare con los registros del correo (MX, SPF, DKIM y DMARC), alias para no dar mi dirección principal, VPN en todos mis dispositivos y una red mesh de tres nodos unidos por cable.
+- [El homelab](https://jdsantana.com/homelab): un mini PC con Debian que filtra la publicidad de toda la casa y me avisa al móvil si algo cae. En la web explico [por qué he decidido cada cosa](https://jdsantana.com/homelab/decisiones).
+- [jdsantana.com](https://jdsantana.com): mi web, con el CV y una bitácora de cada sesión, también de lo que falla. Tiene A+ en Mozilla Observatory.
+- [vtscan](https://github.com/Mafallout/virustotal-folder-scanner): revisa una carpeta de Windows con VirusTotal y ordena los archivos de más a menos peligroso. Tiene ventana y se descarga en un zip con el .exe.
+- Infraestructura personal: lo que uso a diario, con dominio propio, alias de correo, dos llaves FIDO2 y VPN en todos mis dispositivos.
 
 ### Últimas entradas de la bitácora
 
@@ -32,9 +29,13 @@ También mantengo lo que uso a diario: un dominio propio en Cloudflare con los r
 
 ### Con qué trabajo
 
-**Uso:** Debian sin entorno gráfico, LVM, systemd, SSH, UFW, AdGuard Home, DNS sobre HTTPS y sobre TLS, Tailscale, restic, almacenamiento compatible con S3, Docker, Caddy, Uptime Kuma, Prometheus, Grafana, Healthchecks, Cloudflare y Git.  
-**Ahora con:** Home Assistant.  
-**También he usado:** Python, SQL, HTML y XML.
+| Área | Lo que uso |
+| --- | --- |
+| Sistemas | Debian sin entorno gráfico, systemd, LVM, SSH, Docker y Git |
+| Red y DNS | AdGuard Home, DNS sobre HTTPS y sobre TLS, Tailscale, UFW, Caddy y Cloudflare |
+| Copias y vigilancia | restic con almacenamiento compatible con S3, Uptime Kuma, Prometheus, Grafana y Healthchecks |
+
+Ahora estoy con Home Assistant. También he usado Python, SQL, HTML y XML.
 
 Me puedes escribir a [contacto@jdsantana.com](mailto:contacto@jdsantana.com).
 
@@ -43,17 +44,18 @@ Me puedes escribir a [contacto@jdsantana.com](mailto:contacto@jdsantana.com).
 
 Hi, I'm Javi. I study Network and Systems Administration (ASIR, a Spanish vocational degree that takes two years) at IES San Sebastián in Huelva, Spain. What I learn in class I put into practice at home, and if something can be automated, I automate it. I'm looking for a vocational training internship from 3 to 31 May 2027, in or near Huelva.
 
-[The homelab](https://jdsantana.com/homelab) is a mini PC running Debian with no desktop, and it serves my whole home network. It blocks ads and trackers with AdGuard Home, SSH access uses a FIDO2 key, and if it stops responding I get an alert on my phone. I'm expanding it in phases. On my website I explain how each phase is going and [the reasons behind each decision](https://jdsantana.com/homelab/decisiones) (in Spanish).
+- [The homelab](https://jdsantana.com/homelab): a mini PC running Debian that blocks ads for the whole house and alerts my phone if something goes down. On my website I explain [the reasons behind each decision](https://jdsantana.com/homelab/decisiones) (in Spanish).
+- [jdsantana.com](https://jdsantana.com): my website, with my CV and a log of every session, failures included. It scores A+ on Mozilla Observatory.
+- [vtscan](https://github.com/Mafallout/virustotal-folder-scanner): checks a Windows folder with VirusTotal and sorts the files from most to least dangerous. It has a graphical interface and comes as a zip with the .exe.
+- Personal infrastructure: what I use every day, with my own domain, mail aliases, two FIDO2 keys and a VPN on all my devices.
 
-[jdsantana.com](https://jdsantana.com) is my website: my CV, the homelab phase by phase, and a log of every session, failures included. Every change passes automated checks before it goes live on Cloudflare. It scores A+ on Mozilla Observatory, and every Monday a script asks for the grade again and warns me if it drops.
+| Area | What I use |
+| --- | --- |
+| Systems | Debian with no desktop, systemd, LVM, SSH, Docker and Git |
+| Network and DNS | AdGuard Home, DNS over HTTPS and over TLS, Tailscale, UFW, Caddy and Cloudflare |
+| Backups and monitoring | restic with S3 compatible storage, Uptime Kuma, Prometheus, Grafana and Healthchecks |
 
-[vtscan](https://github.com/Mafallout/virustotal-folder-scanner) checks a Windows folder with the free VirusTotal API and sorts the files from most to least dangerous. It's meant for large folders, like programs downloaded from unofficial sources. It saves every answer so it never asks twice, and it stays within the API limits.
-
-I also look after what I use every day: my own domain on Cloudflare with its mail records (MX, SPF, DKIM and DMARC), aliases so I never give out my main address, a VPN on all my devices, and a mesh network of three nodes linked by cable.
-
-**I use:** Debian with no desktop, LVM, systemd, SSH, UFW, AdGuard Home, DNS over HTTPS and over TLS, Tailscale, restic, storage compatible with S3, Docker, Caddy, Uptime Kuma, Prometheus, Grafana, Healthchecks, Cloudflare and Git.  
-**Working on now:** Home Assistant.  
-**I have also used:** Python, SQL, HTML and XML.
+Right now I'm working on Home Assistant. I have also used Python, SQL, HTML and XML.
 
 You can write to me at [contacto@jdsantana.com](mailto:contacto@jdsantana.com).
 
